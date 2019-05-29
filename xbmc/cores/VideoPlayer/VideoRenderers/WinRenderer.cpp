@@ -46,7 +46,9 @@ struct render_details
   }
 };
 static bool first = true;
+{
 if (picture.hasDisplayMetadata || picture.hasLightMetadata)
+{
 void SetHdrMonitorMode(bool enableHDR)
   {
       if (first)
