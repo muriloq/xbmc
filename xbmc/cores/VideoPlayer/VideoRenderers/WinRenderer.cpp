@@ -6,6 +6,7 @@
  *  See LICENSES/README.md for more information.
  */
 
+#define WIN32_LEAN_AND_MEAN
 #include "WinRenderer.h"
 #include "RenderCapture.h"
 #include "RenderFactory.h"
@@ -26,6 +27,7 @@
 #include "nvapi.h"
 #include "uhdDisplay.h"
 
+
 struct render_details
 {
   using map = std::map<RenderMethod, int>;
@@ -43,7 +45,7 @@ struct render_details
     return { method, name, T::Create, T::GetWeight };
   }
 };
-
+static bool first = true;
 if (picture.hasDisplayMetadata || picture.hasLightMetadata)
 void SetHdrMonitorMode(bool enableHDR)
   {
